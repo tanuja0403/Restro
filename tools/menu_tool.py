@@ -1,24 +1,72 @@
+# import json
+# import os
+
+# def load_menu():
+#     """Load menu data from menu.json"""
+#     path = os.path.join("data", "menu.json")
+#     with open(path, "r") as f:
+#         return json.load(f)
+
+# def search_menu(query):
+#     """Search menu items by keyword"""
+#     menu = load_menu()
+#     query = query.lower()
+
+#     results = []
+#     for item in menu:
+#         if query in item["name"].lower() or query in item["category"].lower():
+#             results.append(item)
+
+#     return results
+
+# def filter_menu(veg=None, spicy=None):
+#     """Filter menu based on veg/spicy preferences"""
+#     menu = load_menu()
+#     results = []
+
+#     for item in menu:
+#         if veg is not None and item["veg"] != veg:
+#             continue
+#         if spicy is not None and item["spicy"] != spicy:
+#             continue
+#         results.append(item)
+
+#     return results
+
+
+
 import json
-from pathlib import Path
-
-DATA_DIR = Path(__file__).resolve().parents[1] / 'data'
-MENU_JSON = DATA_DIR / 'menu.json'
-
+import os
 
 def load_menu():
-    if not MENU_JSON.exists():
-        return []
-    with open(MENU_JSON, 'r', encoding='utf-8') as f:
+    """Load menu data from menu.json"""
+    path = os.path.join("data", "menu.json")
+    with open(path, "r") as f:
         return json.load(f)
 
-
-def get_item(item_id):
+def search_menu(query):
+    """Search menu items by keyword"""
     menu = load_menu()
+    query = query.lower()
+
+    results = []
     for item in menu:
-        if item.get('id') == item_id:
-            return item
-    return None
+        if query in item["name"].lower() or query in item["category"].lower():
+            results.append(item)
 
+    return results
 
-def list_menu():
-    return load_menu()
+def filter_menu(veg=None, spicy=None):
+    """Filter menu based on veg/spicy preferences"""
+    menu = load_menu()
+    results = []
+
+    for item in menu:
+        if veg is not None and item["veg"] != veg:
+            continue
+        if spicy is not None and item["spicy"] != spicy:
+            continue
+        results.append(item)
+
+    return results
+

@@ -3,6 +3,7 @@
 This is a small skeleton project for a 'restaurant-agent' CLI.
 
 Structure:
+
 - `main.py` - entrypoint
 - `agents/` - contains agents that orchestrate actions
 - `tools/` - file-based tools for data persistence
@@ -21,6 +22,7 @@ python main.py
 ```
 
 Commands in the CLI:
+
 - `order <item_id> [quantity]` - place an order
 - `reserve <name> <time>` - create a simple reservation
 - `inventory` - view inventory

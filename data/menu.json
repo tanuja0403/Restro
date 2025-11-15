@@ -1,20 +1,34 @@
 [
   {
-    "id": "1",
-    "name": "Cheeseburger",
-    "description": "Beef patty, cheese, lettuce, tomato, bun",
-    "price": 8.99
+    "id": 1,
+    "name": "Paneer Tikka",
+    "category": "starter",
+    "veg": true,
+    "spicy": "medium",
+    "price": 180
   },
   {
-    "id": "2",
-    "name": "Margherita Pizza",
-    "description": "Fresh mozzarella, tomato sauce, basil",
-    "price": 12.50
+    "id": 2,
+    "name": "Chicken Biryani",
+    "category": "main",
+    "veg": false,
+    "spicy": "medium",
+    "price": 250
   },
   {
-    "id": "3",
-    "name": "Caesar Salad",
-    "description": "Romaine, croutons, Caesar dressing, parmesan",
-    "price": 7.00
+    "id": 3,
+    "name": "Veg Fried Rice",
+    "category": "main",
+    "veg": true,
+    "spicy": "low",
+    "price": 150
+  },
+  {
+    "id": 4,
+    "name": "Masala Dosa",
+    "category": "breakfast",
+    "veg": true,
+    "spicy": "low",
+    "price": 120
   }
 ]
