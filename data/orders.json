@@ -1,0 +1,11 @@
+[
+  {
+    "order_id": "81744895-8b7d-4f33-9571-cb7bc105968f",
+    "item_id": "2",
+    "item_name": "Margherita Pizza",
+    "quantity": 1,
+    "price": 12.5,
+    "customer": "guest",
+    "created_at": "2025-11-15T18:25:18.553914Z"
+  }
+]
